@@ -18,7 +18,9 @@ public class ContactBook {
             choice = sc.nextInt();
             sc.nextLine(); // clear buffer
 
-            switch (choice) {
+       try
+       { 
+           switch (choice) {
                 case 1:
                     System.out.print("Enter Contact Number: ");
                     String no = sc.nextLine();
@@ -55,6 +57,11 @@ public class ContactBook {
                 default:
                     System.out.println("Invalid Choice!");
             }
+       }catch(Exception e)
+           {
+               System.out.println(e);
+           }
         } while (choice != 4);
     }
 }
+
